@@ -20,21 +20,20 @@
 # in inherited configurations.
 
 PRODUCT_PACKAGES := \
-    libfwdlockengine \
-    WAPPushManager
+    libfwdlockengine
 
 # Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.com.android.dateformat=MM-dd-yyyy
+    ro.com.android.dateformat=dd-MM-yyyy
 
-# Put zh_CN first in the list, so make it default.
-PRODUCT_LOCALES := zh_CN
+# Put it_IT first in the list, so make it default.
+PRODUCT_LOCALES := it_IT
 
 # Get some sounds
 # $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 
 # Get the TTS language packs
-$(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
+#$(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
 
 ifeq ($(TARGET_LOCALES),)
 # Get a list of languages.
